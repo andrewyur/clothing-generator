@@ -1,20 +1,18 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel
-from PyQt5.QtGui import QIcon
-from PyQt5.QtCore import pyqtSlot
+import os
+from PyQt6.QtGui import QGuiApplication
+from PyQt6.QtQml import QQmlApplicationEngine
+from PyQt6.QtQuick import QQuickWindow
+# pip install PyQt6
 
-def window():
-   app = QApplication(sys.argv)
-   widget = QWidget()
+QQuickWindow.setSceneGraphBackend('software')
 
-   textLabel = QLabel(widget)
-   textLabel.setText("Hello World!")
-   textLabel.move(110,85)
+app = QGuiApplication(sys.argv)
+engine = QQmlApplicationEngine()
+engine.quit.connect(app.quit)
+engine.load('./UI/main.qml')
+# basic app config stuff ^
 
-   widget.setGeometry(50,50,320,200)
-   widget.setWindowTitle("PyQt5 Example")
-   widget.show()
-   sys.exit(app.exec_())
 
-if __name__ == '__main__':
-   window()
+
+sys.exit(app.exec())

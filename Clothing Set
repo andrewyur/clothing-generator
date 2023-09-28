@@ -1,0 +1,29 @@
+Hats:
+    Beanie,
+    Cap
+
+Outerwear:
+    Jacket
+    Coat
+
+Button-Downs (Special Case):
+    Short Sleeve
+    Long Sleeve
+
+Tops:
+    Short Sleeve Shirt
+    Long Sleeve Shirt
+
+Bottoms:
+    Pants
+    Shorts
+    Skirt
+
+Onsies:
+    Dress
+    Overalls
+
+Shoes:
+    Boots
+    Sneakers
+    Flip-flops

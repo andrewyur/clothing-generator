@@ -1,7 +1,11 @@
-"""The Clothing class contains information on clothing type,
+"""The Clothing class contains information on,
 color, weight, layering priority."""
 class Clothing:
-    def __init__(self, t, c, w, l):
+    def __init__(self, c, w, l):
+
         self.color = c
-        self.weight = weight
-        self.layerReq
+        self.weight = w
+        self.layerReq = l
+
+class Tops(Clothing):
+    def __init__(self, ):

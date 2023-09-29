@@ -1,18 +1,20 @@
+from PyQt6.QtWidgets import QApplication, QWidget
+
+# Only needed for access to command line arguments
 import sys
-import os
-from PyQt6.QtGui import QGuiApplication
-from PyQt6.QtQml import QQmlApplicationEngine
-from PyQt6.QtQuick import QQuickWindow
-# pip install PyQt6
 
-QQuickWindow.setSceneGraphBackend('software')
+# You need one (and only one) QApplication instance per application.
+# Pass in sys.argv to allow command line arguments for your app.
+# If you know you won't use command line arguments QApplication([]) works too.
+app = QApplication(sys.argv)
 
-app = QGuiApplication(sys.argv)
-engine = QQmlApplicationEngine()
-engine.quit.connect(app.quit)
-engine.load('./UI/main.qml')
-# basic app config stuff ^
+# Create a Qt widget, which will be our window.
+window = QWidget()
+window.show()  # IMPORTANT!!!!! Windows are hidden by default.
 
+# Start the event loop.
+app.exec()
 
 
-sys.exit(app.exec())
+# Your application won't reach here until you exit and the event
+# loop has stopped.

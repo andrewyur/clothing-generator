@@ -1,4 +1,5 @@
 # clothing-generator
 clothing generator
 
-https://medium.com/analytics-vidhya/how-to-build-your-first-desktop-application-in-python-7568c7d74311
+Building the app with:
+https://www.pythonguis.com/pyqt6-tutorial/
